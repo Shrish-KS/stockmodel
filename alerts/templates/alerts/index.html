@@ -1,0 +1,19 @@
+{% extends 'alerts/layout.html' %}
+
+{% block body %}
+
+<form action="{%url 'alerts:index' %}" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        {{ field.label}} {{field}} <br /> <br />
+    {% endfor %}
+    <br />
+    <br />
+    <button type="submit">Submit</button>
+    
+</form>
+<br />
+<br />
+You can check the Stock data <a href="{% url 'alerts:checkdata'%}">here</a><br />
+
+{% endblock%}

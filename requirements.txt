@@ -1,0 +1,13 @@
+Django
+yfinance
+matplotlib
+pandas
+statsmodels
+yahoo_fin
+yfinance
+matplotlib
+pandas
+statsmodels
+scikit-learn
+numpy
+django-storages[azure]

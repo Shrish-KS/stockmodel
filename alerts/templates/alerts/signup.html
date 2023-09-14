@@ -1,0 +1,17 @@
+{% extends "alerts/layout.html" %}
+
+{% block body %}
+    <h1>Sign up: </h1>
+    {% if message %}
+        <b style="color:red">{{message}} <br /><br /></b>
+    {% endif %}
+    <form action="{% url 'alerts:signup'%}" method="post">
+        {% csrf_token %}
+        {% for field in form%}
+            {{field.label}} {{field}}<br /><br />
+        {% endfor %}
+        <button name="Submit">Submit</button>
+    </form>
+    <br /><br />
+    <a href="{% url 'alerts:login'%}">login</a>
+{% endblock %}
