@@ -26,7 +26,7 @@ from email.message import EmailMessage
 dic={}
 # Create your views here.
 class Newalertform(forms.Form):
-    Name=forms.CharField(label="New Stock",min_length=2)
+    Name=forms.CharField(label="New Stock",min_length=2,max_length=5)
     alert=forms.DecimalField(label="Alert price",max_digits=7,decimal_places=2)
 
 class newdetailform(forms.Form):
